@@ -1,0 +1,29 @@
+.avatar{
+    width: 4em;
+    margin: 0 auto;
+}
+.display-form {
+    /* padding: 0 3em; */
+    background-color: var(--light-black-color);
+    margin: 0 auto;
+    width: 50%;
+    padding: 3em;
+    border-radius: 1em;
+}
+.loginform{
+    padding: 1em 0;
+}
+.auth-input{
+    width: 100%;
+}
+.input-border{
+    background: var(--white-color);
+    height: 3em;
+    padding: 0 20px;
+    border-radius: 2em;
+    margin: 0.5em 0;
+}
+.signin-signup{
+    margin: 2em;
+    width: 30%;
+}

@@ -1,0 +1,29 @@
+.search-form{
+    width: 100%;
+    max-width: 1100px;
+}
+.search-icon{
+    background: var(--white-color);
+}
+
+.search-icon:hover{
+    background-color: var(--white-color);
+}
+.search-form-elem{
+    padding: 0.5rem 1.5rem;
+    border-radius: 3.8rem;
+    margin: 1em 0;
+}
+.search-form-elem .form-control{
+    font-size: 2rem;
+    padding: 0.6rem;
+}
+.search-form-elem .form-control::placeholder{
+    opacity: 0.9;
+}
+
+@media screen and (max-width: 400px){
+    .form-control{
+        width: 100%;
+    }
+}

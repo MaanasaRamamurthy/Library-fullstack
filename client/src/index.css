@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Inconsolata&family=Libre+Baskerville&family=Montserrat:wght@500&family=Yeseva+One&display=swap');
+:root{
+  --purple-color: #EFA10B;
+  --wall-color: #e4ddd4;
+  --grey-color: rgb(145,145,145);
+  --white-color: #fff;
+  --black-color: #010101;
+  --light-black-color: #e9ebed;
+  --transition: .4s ease-in-out;
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html{
+  font-size: 10px;
+}
+body{
+  font-size: 1.6rem;
+  line-height: 1.7;
+  font-family: 'Poppins', sans-serif;
+  color: var(--black-color);
+}
+
+/* resets */
+ul{
+  list-style-type: none;
+}
+a{
+  text-decoration: none;
+  color: var(--black-color);
+}
+button{
+  padding: 1rem 1.7rem;
+  background: var(--purple-color);
+  border: none;
+  outline: none;
+  border-radius: 3rem;
+  cursor: pointer;
+  font-size: 15px;
+  color: var(--white-color);
+}
+
+button a{
+  color: var(--white-color);
+  font-weight: 500;
+}
+
+button:hover{
+  background: var(--purple-color);
+  color: var(--white-color);
+}
+img{
+  width: 70%;
+  display: block;
+}
+input{
+  border: none;
+  outline: 0;
+  font-family: inherit;
+  font-size: 1.6rem;
+}
+.resize-animation-stopper *{
+  animation: none!important;
+  transition: none!important;
+}
+
+/* backgrounds */
+.bg-pink{background-color: var(--wall-color);}
+.bg-purple{background-color: var(--purple-color);}
+.bg-white{background-color: var(--white-color);}
+
+/* text */
+.text-black{color: var(--black-color);}
+.text-white{color: var(--white-color);}
+.text-purple{color: var(--purple-color);}
+.text-light-black{color: var(--light-black-color);}
+.text-uppercase{text-transform: uppercase;}
+.text-center{text-align: center;}
+.text-capitalize{text-transform: capitalize;}
+.text-italic{font-style: italic;}
+
+/* font weights */
+.fw-3{font-weight: 300;}
+.fw-4{font-weight: 400;}
+.fw-5{font-weight: 500;}
+.fw-6{font-weight: 600;}
+.fw-7{font-weight: 700;}
+.fw-8{font-weight: 800;}
+.fw-9{font-weight: 900;}
+
+/* font sizes */
+.fs-15{font-size: 1.5rem;}
+.fs-16{font-size: 1.6rem;}
+.fs-17{font-size: 1.7rem;}
+.fs-18{font-size: 1.8rem;}
+.fs-20{font-size: 2rem;}
+.fs-22{font-size: 2.2rem;}
+.fs-24{font-size: 2.4rem;}
+.fs-26{font-size: 2.6rem;}
+
+/* letter spacing */
+.ls-1{letter-spacing: 1px;}
+.ls-2{letter-spacing: 2px;}
+
+.flex{
+  display: flex;
+  align-items: center;
+}
+.flex-column{
+  flex-direction: column;
+}
+.flex-sb{
+  justify-content: space-between;
+}
+.flex-c{
+  justify-content: center;
+}
+.grid{
+  display: grid;
+}
+.container{
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* section title */
+.section{
+  padding: 4rem 0 2rem;
+}
+.container{
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+.section-title h2{
+  font-weight: 600;
+  text-align: center;
+  /* text-transform: uppercase; */
+  padding: 18px 0 24px 0;
+}
+h1{
+  font-family: 'Inconsolata', monospace;
+}
+h2{
+  font-family: 'Inconsolata', monospace;
+}
+h4{
+  font-family: 'Inconsolata', monospace;
+}
+.about-title{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 5rem;
+}
+.none{
+  display: none;
+}
+.empty{
+  margin: 0 auto;
+}
+.top-component{
+  padding: 6em 0;
+}
+.about-title h2{
+  margin-top: 0;
+  padding-top: 0;
+}
+.about-bookhub{
+  text-transform: uppercase;
+  color: var(--grey-color);
+}
+
+::selection{
+  background: var(--purple-color);
+  color: var(--white-color);
+}
+
+::-webkit-scrollbar{
+  width: 10px;
+  background: var(--wall-color);
+}
+::-webkit-scrollbar-thumb{
+  background: var(--purple-color);
+  border-radius: 10px;
+}
+
+@media screen and (max-width: 450px){
+  h1{
+    font-size: 2.7rem;
+  }
+}
+
+@media screen and (min-width: 1024px){
+  p{
+    font-size: 15px;
+    line-height: 25px;
+  }
+
+  h4{
+    font-size: 20px;
+  }
+  h2{
+    font-size: 27px;
+  }
+  .section{ 
+    padding: 6rem 0 4rem;
+  }
+  .container{
+    width: 75%;
+    margin: auto;
+  }
+}

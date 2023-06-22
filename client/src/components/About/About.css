@@ -1,0 +1,46 @@
+.about{
+    padding: 3rem 0;
+}
+
+.about-content{
+    gap: 4rem;
+    align-items: center;
+}
+
+.about-title{
+    margin:8rem 0 0rem 0;;
+}
+
+.about-img img{
+    max-width: 520px;
+    margin: auto;
+
+}
+
+.fs-17{
+    margin: 0;
+    opacity: 0.8;
+    color: var(--grey-color);
+}
+
+.about-points{
+    margin: 1em 0;
+}
+
+.about-heading{
+    font-weight: 600;
+    font-size: 1.1em;
+}
+
+/* for larger screen size */
+@media screen and (min-width: 800px){
+    .about-content{
+        grid-template-columns: repeat(2, 1fr);  /* 1 fraction unit of available space for each column */
+    }
+    .about-title{
+        margin-top: 6rem 0;
+    }
+    .about-img img{
+    margin: auto;
+    }
+}

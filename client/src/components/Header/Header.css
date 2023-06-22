@@ -1,0 +1,20 @@
+.holder{
+    margin: 5rem 0 0 0;
+    padding: 6rem 0 0 0;
+}
+
+.header-content{
+    min-height: 75vh;
+    background: linear-gradient(rgba(221, 171, 238, 0.3), rgba(241, 108, 32, 0.5)), url("../../images/bg.jpg") center/cover no-repeat;
+    flex-direction: column;
+}
+.header-title{
+    font-size: 4.2rem;
+}
+.header-text{
+    font-weight: 400;
+    margin-top: -1.8rem;
+    margin-bottom: 2.8rem;
+    opacity: 0.8;
+    max-width: 770px;
+}

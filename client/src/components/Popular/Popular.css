@@ -1,0 +1,129 @@
+.sectionContainer{
+    text-align: center;
+}
+
+.popularContainer{
+    margin-top: 1rem;
+    gap: 2rem;
+    
+    margin: 3rem 0 7em;
+}
+.singleWriter{
+    position: relative;     /*positioned relative to it's original position in the document flow, changed using left,rigt,top,bottom properties*/
+    height: 320px;
+    /* width: 85%; */
+    width: 100%;
+    max-width: 250px;
+    overflow: hidden;
+    border-radius: 2rem;
+    gap: 1rem;
+    margin: auto;
+}
+
+.bookImage, .writerImage, .writerName{
+    position: absolute;     /*completely removed out of normal document flow. Placed relative to its closest ancestor whose position should be(relative, fixed, absolute, sticky)*/
+}
+
+.bookImage{
+    height: 100%;
+    width: 100%;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    object-fit: cover;
+}
+.writerPicture {
+    display: flex;
+    justify-content: center;
+  }
+  
+
+.writerImage{
+    height: 50px;
+    width: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+    bottom: 30px;
+    transform: translateX(-50%);
+    border: 5px solid rgba(225, 225, 225, 0.637);
+    transition: var(--transition);
+    animation: animated 2.3s infinite;
+}
+
+@keyframes animated{
+    0%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(8px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+
+.writerName{
+    bottom: -100%;
+    width: 100%;
+    height:  max-content;
+    background: var(--light-black-color);
+    padding: 1.5rem 1rem;
+    transition: var(--transition);
+    font-size: 14px;
+    animation: animatedBorders 2.3s infinite;
+}
+.writerName .span{
+    display: block;
+    color: var(--black-color);
+    font-weight: 700;
+}
+.writerName p{
+    color: var(--black-color);
+    font-style: italic;
+    font-size: 14px;
+}
+
+
+@keyframes animatedBorders{
+    0%{
+        border-radius: 0rem;
+    }
+    50%{
+        border-radius: 2rem;
+    }
+    100%{
+        border-radius: 0rem;
+    }
+}
+
+.singleWriter:hover{
+    
+    .writerName{
+        bottom: 0;              /* defines the distance from the bottom edge of it's parent block */  
+        transition: 1s ease-in-out; 
+    }
+
+    .writerImage{
+        bottom: 110px;          /* moves it upwards by 110 pixels from the bottom edge of its parent container*/
+        transition: 1s ease-in-out;
+    }
+}
+
+@media screen and (min-width: 480px){
+    .popularContainer{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (min-width: 768px){
+    .popularContainer{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (min-width: 960px){
+    .popularContainer{
+        grid-template-columns: repeat(4,1fr);
+    }
+}

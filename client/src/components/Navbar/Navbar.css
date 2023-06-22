@@ -1,0 +1,246 @@
+/* .navbar{
+    padding: 1.8rem 0;
+    background: var(--light-black-color);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+}
+.navbar-brand{
+    width: 90px;
+}
+
+.logo_img{
+    border-radius: 50%;
+}
+.navbar-brand span{
+    margin-left: 2rem;
+}
+.brand-and-toggler{
+    width: 100%;
+}
+.navbar-content{
+    display: flex;
+    width: 100%;
+}
+.navbar-toggler-btn{
+    transition: var(--transition);
+    z-index: 11;
+}
+.navbar-collapse{
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 10;
+    background-color: var(--wall-color);
+    height: 100%;
+    width: 280px;
+    display: flex;
+    padding: 10rem 3rem 0 3rem;
+    transform: translatex(100%);
+    transition: var(--transition);      
+
+}
+.show-navbar-collapse{
+    transform: translateX(0);
+}
+.nav-item{
+    margin-bottom: 1.4rem;
+}
+.nav-link{
+    transition: var(--transition);
+}
+.nav-link:hover{
+    color: var(--purple-color);
+}
+
+
+@media screen and (min-width: 992px){
+    .navbar-collapse{
+        position: relative;
+        height: auto;
+        padding: 0;
+        width: 100%;
+        background-color: transparent;
+        transform: translateX(0);
+        justify-content: flex-end;
+    }
+
+    .navbar-toggler-btn{
+        display: none;
+    }
+    .nav-item{
+        margin-bottom: 0;
+        margin-left: 1.8rem;
+    }
+    .nav-link{
+        color: var(--black-color);
+        font-size: 1.5rem;
+        font-weight: 500!important;
+        opacity: 0.8;
+    }
+    .navbar-nav{
+        display: flex;
+    }
+} */
+.navBar{
+    position:fixed;
+    flex-direction: column;
+    width: 100%;
+    z-index: 1000;
+}
+/* .logo{
+    border-radius: 50%;
+} */
+.navBarOne, .navBarTwo{
+    justify-content: space-between;
+    padding: 1rem;
+    width: 100%;
+}
+.navBarOne{
+    background-color: var(--light-black-color);
+}
+.navBarOne .icon:hover{
+    color: var(--black-color);
+}
+.navBarOne .atb{
+    gap: 1rem;
+}
+.navBarOne .atb span{
+    color: var(--black-color);
+    font-size: 13px;
+    cursor: pointer;
+}
+.navBarOne .atb span:hover{
+    color: var(--purple-color);
+    font-size: 700;
+}
+.navBarTwo{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    transition: .3s ease-in-out;
+}
+.navBarTwo .logoDiv .logo{
+    border-radius: 50%;
+}
+
+.navBarTwo{
+        width: 95%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        top: 3rem;
+        transition: .3s ease-in-out;
+
+    .logoDiv {
+        .logo{
+            width: 10%;
+        }
+    }
+
+@media screen and (max-width: 768px) {
+    
+    .navBarMenu{
+        position: absolute;
+        background: var(--grey-color);
+        padding: 1.5rem;
+        border-radius: 10px;
+        top: 5rem;
+        right: -50%;
+        width: 80%;
+        transform: translateX(50%);
+        z-index: 2000;
+        box-shadow: rgba(0,0,0,0.1) 0px 10px 15px -3px, rgba(0,0,0,0.05) 0px 4px 6px -2px;
+        border: 3px solid var(--whiteColor);
+        transition: .4s ease-in-out;
+
+        .menu{
+            flex-direction: column;
+            gap: .5rem;
+            text-align: center;
+            .listItem{
+                font-weight: 500;
+                font-size: 1.5rem;
+                padding: .5rem 0;
+                cursor: pointer;
+                color: var(--black-color);
+            }
+            &:hover{
+                color: var(--purple-color);
+                font-weight: 700;
+            }
+        }
+    }
+
+    .btnOne{
+        display: block;
+        justify-content: center;
+        margin: auto;
+        margin-top: 1rem;
+    }
+
+    .toggleIcon{
+        display: block;
+    }
+    .toggleIcon .icons{
+            font-size: 30px;
+            color: var(--black-color);
+        }
+    .showNavBar{
+        right: 50%;
+        background: var(--light-black-color);
+        transition: .5s ease-in-out;
+    }
+}
+
+}
+.toggleIcon {
+    display: none;
+}
+
+@media screen and (min-width: 768px){
+    .navBarMenu{
+        display: flex;
+        flex-direction: row;
+    }
+    .navBar{
+        align-items: center;
+    }
+    .none{
+        display: flex;
+        gap: 1.5rem;
+    }
+    .navBar .navBarOne .none li{
+        font-size: 13px;
+        gap: .5rem;
+        color: var(--black-color);
+    }
+    .navBar .navBarOne .none li:hover{
+        color: var(--purple-color);
+        text-decoration: underline;
+    }
+    .navBarTwo{
+        justify-content: space-between;
+        align-items: center;
+    }
+    .navBarTwo .logoDiv .logo{
+        max-width: 10%;
+        border-radius: 50%;
+    }
+    .navBarTwo .menu{
+        flex-direction: row;
+        gap: .5rem;
+    }
+    .navBarTwo .menu .listItem{
+        font-weight: 500;
+        font-size: 1.5rem;
+        padding: 0 .5rem;
+        cursor: pointer;
+        color: var(--black-color);
+    }
+    .navBarTwo .menu .listItem:hover{
+        color: var(--purple-color);
+    }
+    .navBarTwo .btnOne, .toggleIcon{
+        display: none;
+    }
+}
