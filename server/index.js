@@ -23,8 +23,10 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use('/users', useRoutes)
+require('dotenv').config();
 
-const CONNECTION_URL = 'mongodb+srv://maanasa:maanasa123@cluster0.lmropmf.mongodb.net/?retryWrites=true&w=majority'
+// Access environment variables
+const CONNECTION_URL = process.env.CONNECTION_URL
 const PORT = process.env.PORT || 5000
 
 mongoose.connect(CONNECTION_URL,{
